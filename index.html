@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prosperum Consórcios - Realize Seus Sonhos</title>
+    <meta name="description" content="Prosperum Consórcios - Realize seus sonhos com planos acessíveis em Curitiba.">
+    <meta name="keywords" content="consórcio, Curitiba, Prosperum, carro, casa, consórcio sem juros">
+    <meta name="author" content="Prosperum Consórcios">
+    <title>Prosperum Consórcios - Consórcios de Carro e Casa em Curitiba</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -89,25 +92,25 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-dark-blue text-center mb-12">Entre em Contato</h2>
             <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
-                <div>
+                <form action="https://formspree.io/f/xeogedew" method="POST">
                     <div class="mb-4">
                         <label for="nome" class="block text-dark-blue font-bold mb-2">Nome</label>
-                        <input type="text" id="nome" class="w-full p-3 border rounded-lg" placeholder="Seu nome" required>
+                        <input type="text" id="nome" name="nome" class="w-full p-3 border rounded-lg" placeholder="Seu nome" required>
                     </div>
                     <div class="mb-4">
                         <label for="email" class="block text-dark-blue font-bold mb-2">E-mail</label>
-                        <input type="email" id="email" class="w-full p-3 border rounded-lg" placeholder="Seu e-mail" required>
+                        <input type="email" id="email" name="email" class="w-full p-3 border rounded-lg" placeholder="Seu e-mail" required>
                     </div>
                     <div class="mb-4">
                         <label for="telefone" class="block text-dark-blue font-bold mb-2">Telefone</label>
-                        <input type="tel" id="telefone" class="w-full p-3 border rounded-lg" placeholder="(41) 99999-9999" required>
+                        <input type="tel" id="telefone" name="telefone" class="w-full p-3 border rounded-lg" placeholder="(41) 99999-9999" required>
                     </div>
                     <div class="mb-4">
                         <label for="mensagem" class="block text-dark-blue font-bold mb-2">Mensagem</label>
-                        <textarea id="mensagem" class="w-full p-3 border rounded-lg" rows="5" placeholder="Como podemos te ajudar?"></textarea>
+                        <textarea id="mensagem" name="mensagem" class="w-full p-3 border rounded-lg" rows="5" placeholder="Como podemos te ajudar?"></textarea>
                     </div>
-                    <button onclick="alert('Formulário enviado! Entraremos em contato em breve.')" class="bg-gold text-dark-blue px-6 py-3 rounded-full font-bold hover:bg-yellow-600 w-full">Enviar</button>
-                </div>
+                    <button type="submit" class="bg-gold text-dark-blue px-6 py-3 rounded-full font-bold hover:bg-yellow-600 w-full">Enviar</button>
+                </form>
             </div>
         </div>
     </section>
@@ -132,28 +135,9 @@
     <!-- Footer -->
     <footer class="bg-dark-blue text-white py-8">
         <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 Prosperum Consórcios. Todos os direitos reservados.</p>
+            <p>© 2025 Prosperum Consórcios. Todos os direitos reservados.</p>
             <p class="mt-2">Curitiba, PR | <a href="https://instagram.com/prosperumconsorcios" class="hover:text-gold">@prosperumconsorcios</a></p>
         </div>
     </footer>
 </body>
 </html>
-<form action="https://formspree.io/f/xeogedew" method="POST">
-    <div class="mb-4">
-        <label for="nome" class="block text-dark-blue font-bold mb-2">Nome</label>
-        <input type="text" id="nome" name="nome" class="w-full p-3 border rounded-lg" placeholder="Seu nome" required>
-    </div>
-    <div class="mb-4">
-        <label for="email" class="block text-dark-blue font-bold mb-2">E-mail</label>
-        <input type="email" id="email" name="email" class="w-full p-3 border rounded-lg" placeholder="Seu e-mail" required>
-    </div>
-    <div class="mb-4">
-        <label for="telefone" class="block text-dark-blue font-bold mb-2">Telefone</label>
-        <input type="tel" id="telefone" name="telefone" class="w-full p-3 border rounded-lg" placeholder="(41) 99999-9999" required>
-    </div>
-    <div class="mb-4">
-        <label for="mensagem" class="block text-dark-blue font-bold mb-2">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" class="w-full p-3 border rounded-lg" rows="5" placeholder="Como podemos te ajudar?"></textarea>
-    </div>
-    <button type="submit" class="bg-gold text-dark-blue px-6 py-3 rounded-full font-bold hover:bg-yellow-600 w-full">Enviar</button>
-</form>
