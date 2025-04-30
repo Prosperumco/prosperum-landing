@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosperum Consórcios - Realize Seus Sonhos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .bg-gold {
+            background-color: #D4AF37;
+        }
+        .text-dark-blue {
+            color: #1E3A8A;
+        }
+        .bg-dark-blue {
+            background-color: #1E3A8A;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-dark-blue text-white py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="logo.png" alt="Prosperum Consórcios Logo" class="h-12">
+                <h1 class="ml-4 text-2xl font-bold">Prosperum Consórcios</h1>
+            </div>
+            <nav>
+                <a href="#beneficios" class="px-4 hover:text-gold">Benefícios</a>
+                <a href="#depoimentos" class="px-4 hover:text-gold">Depoimentos</a>
+                <a href="#contato" class="px-4 hover:text-gold">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-dark-blue text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">Realize Seus Sonhos com Prosperum Consórcios</h2>
+            <p class="text-lg mb-6">Adquira seu carro, casa ou invista no seu futuro com planos acessíveis e sem burocracia.</p>
+            <a href="#contato" class="bg-gold text-dark-blue px-6 py-3 rounded-full font-bold hover:bg-yellow-600">Fale Conosco</a>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section id="beneficios" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-dark-blue text-center mb-12">Por que Escolher a Prosperum?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <h3 class="text-xl font-bold text-dark-blue mb-4">Planos Flexíveis</h3>
+                    <p>Escolha o consórcio que cabe no seu bolso, com parcelas a partir de R$ 200/mês.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <h3 class="text-xl font-bold text-dark-blue mb-4">Sem Juros</h3>
+                    <p>Nossos consórcios não têm juros, apenas uma pequena taxa administrativa.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <h3 class="text-xl font-bold text-dark-blue mb-4">Atendimento Personalizado</h3>
+                    <p>Equipe em Curitiba pronta para te ajudar a encontrar o melhor plano.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="bg-gray-200 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-dark-blue text-center mb-12">O Que Nossos Clientes Dizem</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <p class="italic">"Consegui minha casa própria com a Prosperum! O atendimento foi incrível e o processo super simples."</p>
+                    <p class="mt-4 font-bold text-dark-blue">- Maria S., Curitiba</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <p class="italic">"Troquei meu carro sem complicações. Recomendo a Prosperum para quem busca segurança."</p>
+                    <p class="mt-4 font-bold text-dark-blue">- João P., Curitiba</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Contato -->
+    <section id="contato" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-dark-blue text-center mb-12">Entre em Contato</h2>
+            <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <div>
+                    <div class="mb-4">
+                        <label for="nome" class="block text-dark-blue font-bold mb-2">Nome</label>
+                        <input type="text" id="nome" class="w-full p-3 border rounded-lg" placeholder="Seu nome" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-dark-blue font-bold mb-2">E-mail</label>
+                        <input type="email" id="email" class="w-full p-3 border rounded-lg" placeholder="Seu e-mail" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="telefone" class="block text-dark-blue font-bold mb-2">Telefone</label>
+                        <input type="tel" id="telefone" class="w-full p-3 border rounded-lg" placeholder="(41) 99999-9999" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="mensagem" class="block text-dark-blue font-bold mb-2">Mensagem</label>
+                        <textarea id="mensagem" class="w-full p-3 border rounded-lg" rows="5" placeholder="Como podemos te ajudar?"></textarea>
+                    </div>
+                    <button onclick="alert('Formulário enviado! Entraremos em contato em breve.')" class="bg-gold text-dark-blue px-6 py-3 rounded-full font-bold hover:bg-yellow-600 w-full">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="bg-gray-200 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-dark-blue text-center mb-12">Perguntas Frequentes</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-dark-blue mb-2">O que é um consórcio?</h3>
+                    <p>É uma modalidade de compra parcelada, onde um grupo de pessoas se une para adquirir bens, como carros ou imóveis, sem juros.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-dark-blue mb-2">Quanto tempo leva para ser contemplado?</h3>
+                    <p>Depende do plano e sorteios, mas você pode ser contemplado por sorteio ou lance a qualquer momento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-blue text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Prosperum Consórcios. Todos os direitos reservados.</p>
+            <p class="mt-2">Curitiba, PR | <a href="https://instagram.com/prosperumconsorcios" class="hover:text-gold">@prosperumconsorcios</a></p>
+        </div>
+    </footer>
+</body>
+</html>
