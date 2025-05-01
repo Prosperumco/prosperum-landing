@@ -14,10 +14,13 @@
             background-color: #D4AF37;
         }
         .text-dark-blue {
-            color: #1E3A8A;
+            color: #1B2A44;
         }
         .bg-dark-blue {
-            background-color: #1E3A8A;
+            background-color: #1B2A44;
+        }
+        .hover\:bg-gold-dark:hover {
+            background-color: #B8972E;
         }
     </style>
 </head>
@@ -40,9 +43,9 @@
     <!-- Hero Section -->
     <section class="bg-dark-blue text-white py-20">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-4">Realize Seus Sonhos com Prosperum Consórcios</h2>
+            <h2 class="text-4xl font-bold mb-4">Realize Seus Sonhos com a Prosperum Consórcios</h2>
             <p class="text-lg mb-6">Adquira seu carro, casa ou invista no seu futuro com planos acessíveis e sem burocracia.</p>
-            <a href="#contato" class="bg-gold text-dark-blue px-6 py-3 rounded-full font-bold hover:bg-yellow-600">Fale Conosco</a>
+            <a href="#contato" class="bg-gold text-dark-blue px-6 py-3 rounded-full font-bold hover:bg-gold-dark">Fale Conosco</a>
         </div>
     </section>
 
@@ -74,11 +77,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <p class="italic">"Consegui minha casa própria com a Prosperum! O atendimento foi incrível e o processo super simples."</p>
-                    <p class="mt-4 font-bold text-dark-blue">- Maria S., Curitiba</p>
+                    <p class="mt-4 font-bold text-dark-blue">- Vinicius., Curitiba</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <p class="italic">"Troquei meu carro sem complicações. Recomendo a Prosperum para quem busca segurança."</p>
-                    <p class="mt-4 font-bold text-dark-blue">- João P., Curitiba</p>
+                    <p class="mt-4 font-bold text-dark-blue">- Renan., Curitiba</p>
                 </div>
             </div>
         </div>
@@ -104,10 +107,30 @@
                         <input type="tel" id="telefone" name="telefone" class="w-full p-3 border rounded-lg" placeholder="(41) 99999-9999" required>
                     </div>
                     <div class="mb-4">
+                        <label for="bem_desejado" class="block text-dark-blue font-bold mb-2">Bem Desejado</label>
+                        <select id="bem_desejado" name="bem_desejado" class="w-full p-3 border rounded-lg" required>
+                            <option value="" disabled selected>Selecione o bem desejado</option>
+                            <option value="Moto">Moto</option>
+                            <option value="Carro">Carro</option>
+                            <option value="Caminhão">Caminhão</option>
+                            <option value="Imóvel">Imóvel</option>
+                            <option value="Construção">Construção</option>
+                            <option value="Reforma">Reforma</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="valor_bem" class="block text-dark-blue font-bold mb-2">Valor do Bem (R$)</label>
+                        <input type="number" id="valor_bem" name="valor_bem" class="w-full p-3 border rounded-lg" placeholder="Ex.: 50000" step="0.01" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="valor_parcela" class="block text-dark-blue font-bold mb-2">Valor de Parcela Desejada (R$/mês)</label>
+                        <input type="number" id="valor_parcela" name="valor_parcela" class="w-full p-3 border rounded-lg" placeholder="Ex.: 500" step="0.01" required>
+                    </div>
+                    <div class="mb-4">
                         <label for="mensagem" class="block text-dark-blue font-bold mb-2">Mensagem</label>
                         <textarea id="mensagem" name="mensagem" class="w-full p-3 border rounded-lg" rows="5" placeholder="Como podemos te ajudar?"></textarea>
                     </div>
-                    <button type="submit" class="bg-gold text-dark-blue px-6 py-3 rounded-full font-bold hover:bg-yellow-600 w-full">Enviar</button>
+                    <button type="submit" class="bg-gold text-dark-blue px-6 py-3 rounded-full font-bold hover:bg-gold-dark w-full">Enviar</button>
                 </form>
             </div>
         </div>
@@ -120,7 +143,7 @@
             <div class="space-y-4">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-bold text-dark-blue mb-2">O que é um consórcio?</h3>
-                    <p>É uma modalidade de compra parcelada, onde um grupo de pessoas se une para adquirir bens, como carros ou imóveis, sem juros.</p>
+                    <p>É uma modalidade de compra parcelada, onde um grupo de pessoas se une para adquirir bens, como automovéis ou imóveis, sem juros.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-bold text-dark-blue mb-2">Quanto tempo leva para ser contemplado?</h3>
@@ -133,7 +156,7 @@
     <!-- Footer -->
     <footer class="bg-dark-blue text-white py-8">
         <div class="container mx-auto px-4 text-center">
-            <p>© 2025 Prosperum Consórcios. Todos os direitos reservados.</p>
+            <p>© 2021 Prosperum Consórcios. Todos os direitos reservados.</p>
             <p class="mt-2">Curitiba, PR | <a href="https://instagram.com/prosperumconsorcios" class="hover:text-gold">@prosperumconsorcios</a></p>
         </div>
     </footer>
