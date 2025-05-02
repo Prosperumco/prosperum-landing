@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Prosperum Consórcios - Consórcios premium para carros, motos e imóveis em Curitiba. Simule agora planos exclusivos para você!">
+  <meta name="description" content="Prosperum Consórcios - Consórcios para você e sua família, carros, motos e imóveis em Curitiba. Simule agora planos exclusivos para sua renda!">
   <meta name="keywords" content="consórcio, consórcio Curitiba, Prosperum Consórcios, consórcio imóvel, consórcio carro premium, simulação consórcio">
   <meta name="author" content="Prosperum Consórcios">
   <title>Prosperum Consórcios - Planos Premium em Curitiba</title>
@@ -42,7 +42,7 @@
       z-index: 0;
     }
     .hero-overlay {
-      background: rgba(27, 42, 68, 0.6); /* Overlay mais claro para destaque */
+      background: rgba(27, 42, 68, 0.6);
       position: absolute;
       top: 0;
       left: 0;
@@ -73,12 +73,19 @@
       right: 20px;
       z-index: 1000;
       background-color: #25D366;
-      padding: 12px;
+      padding: 10px;
       border-radius: 50%;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .whatsapp-btn:hover {
       background-color: #20b358;
+    }
+    .whatsapp-btn img {
+      width: 40px;
+      height: 40px;
     }
   </style>
 </head>
@@ -93,7 +100,7 @@
     <div class="container mx-auto px-4 hero-content">
       <img src="logo.png" alt="Logo Prosperum Consórcios" class="logo mx-auto mb-6">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">Planos Premium para Seu Futuro</h1>
-      <p class="text-lg md:text-xl mb-8">Consórcios sem juros para imóveis de alto padrão, carros premium e muito mais. Simule agora!</p>
+      <p class="text-lg md:text-xl mb-8">Consórcios sem juros para imóveis de alto padrão, carros premium e mais. Simule agora!</p>
       <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
         <h2 class="text-2xl font-semibold text-azul-escuro mb-4">Simule Seu Consórcio Exclusivo</h2>
         <form action="/obrigado.html" method="GET" onsubmit="return validateForm()">
@@ -146,7 +153,7 @@
         <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition">
           <svg class="w-12 h-12 mx-auto mb-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
           <h3 class="text-xl font-semibold text-azul-escuro mb-2">Planos Flexíveis</h3>
-          <p class="text-gray-600">Parcelas de até R$5.000 para imóveis e carros de alto padrão.</p>
+          <p class="text-gray-600">Parcelas a partir de R$263,00 para imóveis e carros de alto padrão.</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition">
           <svg class="w-12 h-12 mx-auto mb-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
@@ -164,8 +171,8 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
           <img src="https://via.placeholder.com/50" alt="Foto de Ana S." class="rounded-full mx-auto mb-4">
-          <p class="text-gray-600 italic">"Comprei meu apartamento de R$800 mil sem juros. A Prosperum foi essencial!"</p>
-          <p class="text-azul-escuro font-semibold mt-4">— Ana S., Advogada</p>
+          <p class="text-gray-600 italic">"Comprei meu sobrado de R$450 mil sem juros. A Prosperum foi essencial!"</p>
+          <p class="text-azul-escuro font-semibold mt-4">— Vinicius G, Empresário</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
           <img src="https://via.placeholder.com/50" alt="Foto de Carlos M." class="rounded-full mx-auto mb-4">
@@ -178,7 +185,7 @@
           <p class="text-azul-escuro font-semibold mt-4">— Fernanda L., Médica</p>
         </div>
       </div>
-      <p class="text-center text-azul-escuro font-semibold mt-8">Mais de <span class="text-dourado">Milhares</span> de pessoas já realizaram seus sonhos em Curitiba! através do consórcio</p>
+      <p class="text-center text-azul-escuro font-semibold mt-8">Mais de <span class="text-dourado">500 famílias</span> realizaram seus sonhos em Curitiba!</p>
     </div>
   </section>
 
@@ -204,7 +211,8 @@
 
   <!-- Botão Flutuante WhatsApp -->
   <a href="https://wa.me/5541998272178?text=Quero%20simular%20um%20consórcio%20premium!" class="whatsapp-btn" target="_blank" aria-label="Fale conosco no WhatsApp">
-    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.134.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.074-.149-.669-.719-.916-.986-.248-.266-.496-.487-.669-.487-.173-.001-.347.049-.52.148-.173.099-.47.396-.669.694-.198.297-.297.645-.297.995 0 .347.099.694.297.991.198.297.986 1.511 2.379 2.405 1.392.894 2.379 1.039 3.222 1.137.845.099 1.639-.099 2.182-.446.544-.347.793-.744.891-1.091.099-.347.05-.695-.148-.794zm-5.466 5.837c-2.083 0-4.066-.669-5.708-1.934l-.396-.247-4.225.644.669-4.124-.247-.396c-1.265-1.938-1.934-4.116-1.934-6.295 0-6.493 5.315-11.808 11.808-11.808 3.171 0 6.146 1.214 8.382 3.419 2.236 2.205 3.419 5.18 3.419 8.389 0 6.493-5.315 11.808-11.808 11.808zm9.792-2.083c-.347.198-.992.595-2.083.793-.991.198-1.985.297-2.876.297-5.462 0-9.891-4.429-9.891-9.891 0-2.678.991-5.166 2.975-7.051 1.985-1.885 4.672-2.876 7.349-2.876 5.462 0 9.891 4.429 9.891 9.891 0 1.985-.595 3.869-1.784 5.462l1.786 6.543-6.346-1.786z"></path></svg>
+    <!-- Certifique-se de hospedar 'whatsapp-logo.png' na raiz do repositório -->
+    <img src="whatsapp-logo.png" alt="Logo do WhatsApp">
   </a>
 
   <!-- Script para Validação -->
