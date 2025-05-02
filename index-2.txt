@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prosperum Consórcios - Especialista em consórcios para você e sua família. Simule agora planos exclusivos para motos, carros, imóveis, construção, reforma e previdência privada">
+  <meta name="keywords" content="consórcio, consórcio Curitiba, Prosperum Consórcios, consórcio de imóvel, consórcio de carro, simulação consórcio">
+  <meta name="author" content="Prosperum Consórcios">
+  <title>Prosperum Consórcios - Simule Seu Consórcio em Curitiba</title>
+
+  <!-- Fonte Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet">
+
+  <!-- Structured Data para SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Prosperum Consórcios",
+      "url": "https://prosperumco.github.io/prosperum-landing/",
+      "logo": "https://prosperumco.github.io/prosperum-landing/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-41-99827-2178",
+        "contactType": "Customer Support",
+        "areaServed": "BR",
+        "availableLanguage": "Portuguese"
+      },
+      "sameAs": [
+        "https://www.instagram.com/prosperumconsorcios"
+      ]
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+    }
+    .text-dourado {
+      color: #D4AF37;
+    }
+    .bg-azul-escuro {
+      background-color: #1B2A44;
+    }
+    .form-label {
+      background-color: #1B2A44;
+    }
+    .text-dourado-contraste {
+      color: #B08C2F;
+      font-weight: bold;
+    }
+    img.lazyload {
+      opacity: 0;
+      transition: opacity 0.3s ease-in;
+    }
+    img.lazyload[data-loaded="true"] {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Conteúdo existente da landing page aqui -->
+
+  <!-- Imagens otimizadas com lazy loading -->
+  <section class="py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-azul-escuro text-center mb-10 animate__animated animate__fadeInDown">Histórias de Sucesso</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="bg-white p-8 rounded-xl shadow-xl text-center animate__animated animate__zoomIn">
+          <img src="https://via.placeholder.com/50" data-src="https://via.placeholder.com/50" alt="Foto de Vinicius G." class="rounded-full mx-auto mb-4 lazyload">
+          <p class="text-gray-600 italic">"Comprei meu sobrado de R$450 mil sem juros. A Prosperum foi essencial!"</p>
+          <p class="text-azul-escuro font-semibold mt-4">— Vinicius G., Empresário</p>
+        </div>
+        <!-- demais depoimentos -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Script para feedback e desempenho -->
+  <script>
+    document.getElementById('simulacao-form')?.addEventListener('submit', function (e) {
+      const form = this;
+      const btn = form.querySelector('.submit-btn');
+      btn.classList.add('loading');
+      setTimeout(() => {
+        btn.classList.remove('loading');
+        window.location.href = form.action;
+      }, 1500);
+      e.preventDefault();
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const lazyImages = document.querySelectorAll('img.lazyload');
+      lazyImages.forEach(img => {
+        const src = img.getAttribute('data-src');
+        if (src) {
+          img.src = src;
+          img.onload = () => img.setAttribute('data-loaded', 'true');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
