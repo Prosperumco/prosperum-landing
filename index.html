@@ -1,164 +1,200 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prosperum Consórcios - Realize Seus Sonhos</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-        .bg-gold {
-            background-color: #D4AF37;
-        }
-        .text-dark-blue {
-            color: #1B2A44;
-        }
-        .bg-dark-blue {
-            background-color: #1B2A44;
-        }
-        .hover\:bg-gold-dark:hover {
-            background-color: #B8972E;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prosperum Consórcios - Consórcios para carros, motos, imóveis e mais em Curitiba. Simule agora e realize seus sonhos sem juros!">
+  <meta name="keywords" content="consórcio, consórcio Curitiba, Prosperum Consórcios, consórcio carro, consórcio imóvel, simulação consórcio">
+  <meta name="author" content="Prosperum Consórcios">
+  <title>Prosperum Consórcios - Simule Seu Consórcio em Curitiba</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --azul-escuro: #1B2A44;
+      --dourado: #D4AF37;
+      --dourado-escuro: #B89730;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9fafb;
+    }
+    .bg-azul-escuro {
+      background-color: var(--azul-escuro);
+    }
+    .text-dourado {
+      color: var(--dourado);
+    }
+    .hover\:bg-dourado-escuro:hover {
+      background-color: var(--dourado-escuro);
+    }
+    .hero-section {
+      position: relative;
+      min-height: 600px;
+      overflow: hidden;
+    }
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero-overlay {
+      background: rgba(27, 42, 68, 0.7);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .logo {
+      max-width: 120px;
+    }
+    .form-field {
+      transition: all 0.3s ease;
+    }
+    .form-field:focus {
+      border-color: var(--dourado);
+      box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+    }
+    .animate-pulse-slow {
+      animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  </style>
 </head>
-<body class="bg-gray-100">
-    <!-- Header -->
-    <header class="bg-dark-blue text-white py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="logo.png" alt="Prosperum Consórcios Logo" class="h-12">
-                <h1 class="ml-4 text-2xl font-bold">Prosperum Consórcios</h1>
-            </div>
-            <nav>
-                <a href="#beneficios" class="px-4 hover:text-gold">Benefícios</a>
-                <a href="#depoimentos" class="px-4 hover:text-gold">Depoimentos</a>
-                <a href="#contato" class="px-4 hover:text-gold">Contato</a>
-            </nav>
-        </div>
-    </header>
+<body>
+  <!-- Hero Section com Vídeo de Fundo -->
+  <section class="hero-section py-16 text-center text-white relative">
+    <video class="hero-video" autoplay loop muted playsinline>
+      <source src="https://videos.pexels.com/video-files/4262390/4262390-hd_1920_1080_30fps.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="container mx-auto px-4 hero-content">
+      <img src="logo.png" alt="Logo Prosperum Consórcios" class="logo mx-auto mb-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Realize Seus Sonhos com a Prosperum</h1>
+      <p class="text-lg md:text-xl mb-8">Consórcios sem juros para carros, motos, imóveis e mais. Simule agora!</p>
+      <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold text-azul-escuro mb-4">Simule Seu Consórcio</h2>
+        <form action="/obrigado.html" method="GET" onsubmit="return validateForm()">
+          <div class="mb-4">
+            <input type="text" id="nome" name="nome" class="w-full p-3 border rounded-lg form-field" placeholder="Nome completo" required>
+          </div>
+          <div class="mb-4">
+            <input type="email" id="email" name="email" class="w-full p-3 border rounded-lg form-field" placeholder="E-mail" required>
+          </div>
+          <div class="mb-4">
+            <input type="tel" id="telefone" name="telefone" class="w-full p-3 border rounded-lg form-field" placeholder="(41) 99999-9999" required pattern="\(\d{2}\)\s\d{5}-\d{4}">
+          </div>
+          <div class="mb-4">
+            <select id="bem-desejado" name="bem-desejado" class="w-full p-3 border rounded-lg form-field" required>
+              <option value="" disabled selected>Selecione o bem</option>
+              <option value="Moto">Moto</option>
+              <option value="Carro">Carro</option>
+              <option value="Caminhão">Caminhão</option>
+              <option value="Imóvel">Imóvel</option>
+              <option value="Construção">Construção</option>
+              <option value="Reforma">Reforma</option>
+            </select>
+          </div>
+          <div class="mb-4">
+            <input type="number" id="valor-parcela" name="valor-parcela" class="w-full p-3 border rounded-lg form-field" placeholder="Parcela desejada (ex.: 500)" required min="100">
+          </div>
+          <div class="mb-4">
+            <label class="flex items-center">
+              <input type="checkbox" name="lgpd" class="mr-2" required>
+              <span class="text-gray-600 text-sm">Concordo com a coleta de dados, conforme LGPD.</span>
+            </label>
+          </div>
+          <button type="submit" class="w-full bg-dourado text-azul-escuro font-semibold py-3 rounded-lg hover:bg-dourado-escuro transition animate-pulse-slow" aria-label="Simular agora">Simular Agora</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="bg-dark-blue text-white py-20">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-4">Realize Seus Sonhos com a Prosperum Consórcios</h2>
-            <p class="text-lg mb-6">Adquira seu carro, casa ou invista no seu futuro com planos acessíveis e sem burocracia.</p>
-            <a href="#contato" class="bg-gold text-dark-blue px-6 py-3 rounded-full font-bold hover:bg-gold-dark">Fale Conosco</a>
+  <!-- Benefícios -->
+  <section class="py-12 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-azul-escuro text-center mb-8">Vantagens do Consórcio Prosperum</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <h3 class="text-xl font-semibold text-azul-escuro mb-2">Sem Juros</h3>
+          <p class="text-gray-600">Apenas taxa de administração, sem surpresas.</p>
         </div>
-    </section>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <h3 class="text-xl font-semibold text-azul-escuro mb-2">Planos Flexíveis</h3>
+          <p class="text-gray-600">Parcelas que cabem no seu orçamento.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <h3 class="text-xl font-semibold text-azul-escuro mb-2">Atendimento Premium</h3>
+          <p class="text-gray-600">Suporte dedicado em todas as etapas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Benefícios -->
-    <section id="beneficios" class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-dark-blue text-center mb-12">Por que Escolher a Prosperum?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <h3 class="text-xl font-bold text-dark-blue mb-4">Planos Flexíveis</h3>
-                    <p>Escolha o consórcio que cabe no seu bolso, com parcelas a partir de R$ 200/mês.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <h3 class="text-xl font-bold text-dark-blue mb-4">Sem Juros</h3>
-                    <p>Nossos consórcios não têm juros, apenas uma pequena taxa administrativa.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <h3 class="text-xl font-bold text-dark-blue mb-4">Atendimento Personalizado</h3>
-                    <p>Equipe em Curitiba pronta para te ajudar a encontrar o melhor plano.</p>
-                </div>
-            </div>
+  <!-- Depoimentos -->
+  <section class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-azul-escuro text-center mb-8">O que Nossos Clientes Dizem</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <img src="https://via.placeholder.com/50" alt="Foto de Ana S." class="rounded-full mx-auto mb-4">
+          <p class="text-gray-600 italic">"Consegui meu carro em tempo recorde! Atendimento nota 10."</p>
+          <p class="text-azul-escuro font-semibold mt-4">— Ana S.</p>
         </div>
-    </section>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <img src="https://via.placeholder.com/50" alt="Foto de Carlos M." class="rounded-full mx-auto mb-4">
+          <p class="text-gray-600 italic">"O consórcio de imóvel foi a melhor escolha!"</p>
+          <p class="text-azul-escuro font-semibold mt-4">— Carlos M.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <img src="https://via.placeholder.com/50" alt="Foto de Fernanda L." class="rounded-full mx-auto mb-4">
+          <p class="text-gray-600 italic">"Equipe super atenciosa, recomendo!"</p>
+          <p class="text-azul-escuro font-semibold mt-4">— Fernanda L.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Depoimentos -->
-    <section id="depoimentos" class="bg-gray-200 py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-dark-blue text-center mb-12">O Que Nossos Clientes Dizem</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <p class="italic">"Consegui minha casa própria com a Prosperum! O atendimento foi incrível e o processo super simples."</p>
-                    <p class="mt-4 font-bold text-dark-blue">- Vinicius., Curitiba</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <p class="italic">"Troquei meu carro sem complicações. Recomendo a Prosperum para quem busca segurança."</p>
-                    <p class="mt-4 font-bold text-dark-blue">- Renan., Curitiba</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Parceiros -->
+  <section class="py-12 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-azul-escuro text-center mb-8">Nossos Parceiros</h2>
+      <div class="flex justify-center space-x-8">
+        <img src="https://via.placeholder.com/100" alt="Logo Parceiro 1" class="h-12">
+        <img src="https://via.placeholder.com/100" alt="Logo Parceiro 2" class="h-12">
+        <img src="https://via.placeholder.com/100" alt="Logo Parceiro 3" class="h-12">
+      </div>
+    </div>
+  </section>
 
-    <!-- Formulário de Contato -->
-    <section id="contato" class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-dark-blue text-center mb-12">Entre em Contato</h2>
-            <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
-                <form action="https://formspree.io/f/xeogedew" method="POST">
-                    <input type="hidden" name="_next" value="https://prosperumco.github.io/prosperum-landing/obrigado.html">
-                    <div class="mb-4">
-                        <label for="nome" class="block text-dark-blue font-bold mb-2">Nome</label>
-                        <input type="text" id="nome" name="nome" class="w-full p-3 border rounded-lg" placeholder="Seu nome" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="block text-dark-blue font-bold mb-2">E-mail</label>
-                        <input type="email" id="email" name="email" class="w-full p-3 border rounded-lg" placeholder="Seu e-mail" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="telefone" class="block text-dark-blue font-bold mb-2">Telefone</label>
-                        <input type="tel" id="telefone" name="telefone" class="w-full p-3 border rounded-lg" placeholder="(41) 99999-9999" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="bem_desejado" class="block text-dark-blue font-bold mb-2">Bem Desejado</label>
-                        <select id="bem_desejado" name="bem_desejado" class="w-full p-3 border rounded-lg" required>
-                            <option value="" disabled selected>Selecione o bem desejado</option>
-                            <option value="Moto">Moto</option>
-                            <option value="Carro">Carro</option>
-                            <option value="Caminhão">Caminhão</option>
-                            <option value="Imóvel">Imóvel</option>
-                            <option value="Construção">Construção</option>
-                            <option value="Reforma">Reforma</option>
-                        </select>
-                    </div>
-                    <div class="mb-4">
-                        <label for="valor_bem" class="block text-dark-blue font-bold mb-2">Valor do Bem (R$)</label>
-                        <input type="number" id="valor_bem" name="valor_bem" class="w-full p-3 border rounded-lg" placeholder="Ex.: 50000" step="0.01" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="valor_parcela" class="block text-dark-blue font-bold mb-2">Valor de Parcela Desejada (R$/mês)</label>
-                        <input type="number" id="valor_parcela" name="valor_parcela" class="w-full p-3 border rounded-lg" placeholder="Ex.: 500" step="0.01" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="mensagem" class="block text-dark-blue font-bold mb-2">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" class="w-full p-3 border rounded-lg" rows="5" placeholder="Como podemos te ajudar?"></textarea>
-                    </div>
-                    <button type="submit" class="bg-gold text-dark-blue px-6 py-3 rounded-full font-bold hover:bg-gold-dark w-full">Enviar</button>
-                </form>
-            </div>
-        </div>
-    </section>
+  <!-- Footer -->
+  <footer class="bg-azul-escuro text-white py-6">
+    <div class="container mx-auto text-center px-4">
+      <p>© 2025 Prosperum Consórcios. Todos os direitos reservados.</p>
+      <p class="mt-2">Curitiba, PR | <a href="https://instagram.com/prosperumconsorcios" class="text-dourado hover:underline" aria-label="Siga-nos no Instagram">Siga-nos no Instagram</a></p>
+    </div>
+  </footer>
 
-    <!-- FAQ -->
-    <section id="faq" class="bg-gray-200 py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-dark-blue text-center mb-12">Perguntas Frequentes</h2>
-            <div class="space-y-4">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-dark-blue mb-2">O que é um consórcio?</h3>
-                    <p>É uma modalidade de compra parcelada, onde um grupo de pessoas se une para adquirir bens, como automovéis ou imóveis, sem juros.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-dark-blue mb-2">Quanto tempo leva para ser contemplado?</h3>
-                    <p>Depende do plano e sorteios, mas você pode ser contemplado por sorteio ou lance a qualquer momento.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark-blue text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p>© 2021 Prosperum Consórcios. Todos os direitos reservados.</p>
-            <p class="mt-2">Curitiba, PR | <a href="https://instagram.com/prosperumconsorcios" class="hover:text-gold">@prosperumconsorcios</a></p>
-        </div>
-    </footer>
+  <!-- Script para Validação -->
+  <script>
+    function validateForm() {
+      const telefone = document.getElementById('telefone').value;
+      const regex = /^\(\d{2}\)\s\d{5}-\d{4}$/;
+      if (!regex.test(telefone)) {
+        alert('Por favor, insira o telefone no formato (XX) XXXXX-XXXX.');
+        return false;
+      }
+      return true;
+    }
+  </script>
 </body>
 </html>
