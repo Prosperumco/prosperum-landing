@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Prosperum Consórcios - Consórcios para carros, motos, imóveis e mais em Curitiba. Simule agora e realize seus sonhos sem juros!">
-  <meta name="keywords" content="consórcio, consórcio Curitiba, Prosperum Consórcios, consórcio carro, consórcio imóvel, simulação consórcio">
+  <meta name="description" content="Prosperum Consórcios - Consórcios para carros, motos e imóveis em Curitiba. Simule agora planos exclusivos para você!">
+  <meta name="keywords" content="consórcio, consórcio Curitiba, Prosperum Consórcios, consórcio imóvel, consórcio carro premium, simulação consórcio">
   <meta name="author" content="Prosperum Consórcios">
-  <title>Prosperum Consórcios - Simule Seu Consórcio em Curitiba</title>
+  <title>Prosperum Consórcios - Planos exclusivos em Curitiba</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     :root {
-      --azul-escuro: #092441;
+      --azul-escuro: #1B2A44;
       --dourado: #D4AF37;
       --dourado-escuro: #B89730;
     }
@@ -42,7 +42,7 @@
       z-index: 0;
     }
     .hero-overlay {
-      background: rgba(27, 42, 68, 0.7);
+      background: rgba(27, 42, 68, 0.6); /* Overlay mais claro para destaque */
       position: absolute;
       top: 0;
       left: 0;
@@ -67,23 +67,35 @@
     .animate-pulse-slow {
       animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background-color: #25D366;
+      padding: 12px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .whatsapp-btn:hover {
+      background-color: #20b358;
+    }
   </style>
 </head>
 <body>
   <!-- Hero Section com Vídeo de Fundo -->
   <section class="hero-section py-16 text-center text-white relative">
     <video class="hero-video" autoplay loop muted playsinline>
-      <!-- Certifique-se de que 'video.mp4' está na raiz do repositório ou use uma URL externa -->
       <source src="video.mp4" type="video/mp4">
       Seu navegador não suporta vídeos.
     </video>
     <div class="hero-overlay"></div>
     <div class="container mx-auto px-4 hero-content">
       <img src="logo.png" alt="Logo Prosperum Consórcios" class="logo mx-auto mb-6">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Realize Seus Sonhos com a Prosperum</h1>
-      <p class="text-lg md:text-xl mb-8">Consórcios sem juros para carros, motos, imóveis e mais. Simule agora!</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Planos Premium para Seu Futuro</h1>
+      <p class="text-lg md:text-xl mb-8">Consórcios sem juros para imóveis de alto padrão, carros premium e muito mais. Simule agora!</p>
       <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
-        <h2 class="text-2xl font-semibold text-azul-escuro mb-4">Simule Seu Consórcio</h2>
+        <h2 class="text-2xl font-semibold text-azul-escuro mb-4">Simule Seu Consórcio Exclusivo</h2>
         <form action="/obrigado.html" method="GET" onsubmit="return validateForm()">
           <div class="mb-4">
             <input type="text" id="nome" name="nome" class="w-full p-3 border rounded-lg form-field" placeholder="Nome completo" required>
@@ -98,15 +110,15 @@
             <select id="bem-desejado" name="bem-desejado" class="w-full p-3 border rounded-lg form-field" required>
               <option value="" disabled selected>Selecione o bem</option>
               <option value="Moto">Moto</option>
-              <option value="Carro">Carro</option>
+              <option value="Carro">Carro Premium</option>
               <option value="Caminhão">Caminhão</option>
-              <option value="Imóvel">Imóvel</option>
+              <option value="Imóvel">Imóvel de Alto Padrão</option>
               <option value="Construção">Construção</option>
               <option value="Reforma">Reforma</option>
             </select>
           </div>
           <div class="mb-4">
-            <input type="number" id="valor-parcela" name="valor-parcela" class="w-full p-3 border rounded-lg form-field" placeholder="Parcela desejada (ex.: 500)" required min="100">
+            <input type="number" id="valor-parcela" name="valor-parcela" class="w-full p-3 border rounded-lg form-field" placeholder="Parcela desejada (ex.: 1000)" required min="500">
           </div>
           <div class="mb-4">
             <label class="flex items-center">
@@ -114,28 +126,32 @@
               <span class="text-gray-600 text-sm">Concordo com a coleta de dados, conforme LGPD.</span>
             </label>
           </div>
-          <button type="submit" class="w-full bg-dourado text-azul-escuro font-semibold py-3 rounded-lg hover:bg-dourado-escuro transition animate-pulse-slow" aria-label="Simular agora">Simular Agora</button>
+          <button type="submit" class="w-full bg-dourado text-azul-escuro font-semibold py-3 rounded-lg hover:bg-dourado-escuro transition animate-pulse-slow" aria-label="Simular plano premium">Simular Plano Premium</button>
         </form>
       </div>
+      <p class="text-sm mt-4">🚨 Oferta exclusiva até 25/05/2025! 🚨</p>
     </div>
   </section>
 
   <!-- Benefícios -->
   <section class="py-12 bg-gray-100">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-azul-escuro text-center mb-8">Vantagens do Consórcio Prosperum</h2>
+      <h2 class="text-3xl font-bold text-azul-escuro text-center mb-8">Por que Escolher a Prosperum?</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition">
+          <svg class="w-12 h-12 mx-auto mb-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           <h3 class="text-xl font-semibold text-azul-escuro mb-2">Sem Juros</h3>
-          <p class="text-gray-600">Apenas taxa de administração, sem surpresas.</p>
+          <p class="text-gray-600">Apenas taxa de administração, ideal para investimentos planejados.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition">
+          <svg class="w-12 h-12 mx-auto mb-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
           <h3 class="text-xl font-semibold text-azul-escuro mb-2">Planos Flexíveis</h3>
-          <p class="text-gray-600">Parcelas que cabem no seu orçamento.</p>
+          <p class="text-gray-600">Parcelas de até R$5.000 para imóveis e carros de alto padrão.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <h3 class="text-xl font-semibold text-azul-escuro mb-2">Atendimento Premium</h3>
-          <p class="text-gray-600">Suporte dedicado em todas as etapas.</p>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition">
+          <svg class="w-12 h-12 mx-auto mb-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+          <h3 class="text-xl font-semibold text-azul-escuro mb-2">Atendimento VIP</h3>
+          <p class="text-gray-600">Consultores dedicados para planejar seu investimento.</p>
         </div>
       </div>
     </div>
@@ -144,24 +160,25 @@
   <!-- Depoimentos -->
   <section class="py-12">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-azul-escuro text-center mb-8">O que Nossos Clientes Dizem</h2>
+      <h2 class="text-3xl font-bold text-azul-escuro text-center mb-8">Histórias de Sucesso</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
           <img src="https://via.placeholder.com/50" alt="Foto de Ana S." class="rounded-full mx-auto mb-4">
-          <p class="text-gray-600 italic">"Consegui meu carro em tempo recorde! Atendimento nota 10."</p>
-          <p class="text-azul-escuro font-semibold mt-4">— Ana S.</p>
+          <p class="text-gray-600 italic">"Comprei meu apartamento de R$800 mil sem juros. A Prosperum foi essencial!"</p>
+          <p class="text-azul-escuro font-semibold mt-4">— Ana S., Advogada</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
           <img src="https://via.placeholder.com/50" alt="Foto de Carlos M." class="rounded-full mx-auto mb-4">
-          <p class="text-gray-600 italic">"O consórcio de imóvel foi a melhor escolha!"</p>
-          <p class="text-azul-escuro font-semibold mt-4">— Carlos M.</p>
+          <p class="text-gray-600 italic">"Realizei o sonho do carro premium com parcelas que cabem no bolso."</p>
+          <p class="text-azul-escuro font-semibold mt-4">— Carlos M., Empresário</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
           <img src="https://via.placeholder.com/50" alt="Foto de Fernanda L." class="rounded-full mx-auto mb-4">
-          <p class="text-gray-600 italic">"Equipe super atenciosa, recomendo!"</p>
-          <p class="text-azul-escuro font-semibold mt-4">— Fernanda L.</p>
+          <p class="text-gray-600 italic">"Atendimento VIP e plano perfeito para meu investimento."</p>
+          <p class="text-azul-escuro font-semibold mt-4">— Fernanda L., Médica</p>
         </div>
       </div>
+      <p class="text-center text-azul-escuro font-semibold mt-8">Mais de <span class="text-dourado">500 famílias</span> realizaram seus sonhos em Curitiba!</p>
     </div>
   </section>
 
@@ -184,6 +201,11 @@
       <p class="mt-2">Curitiba, PR | <a href="https://instagram.com/prosperumconsorcios" class="text-dourado hover:underline" aria-label="Siga-nos no Instagram">Siga-nos no Instagram</a></p>
     </div>
   </footer>
+
+  <!-- Botão Flutuante WhatsApp -->
+  <a href="https://wa.me/5541999999999?text=Quero%20simular%20um%20consórcio%20premium!" class="whatsapp-btn" target="_blank" aria-label="Fale conosco no WhatsApp">
+    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.134.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.074-.149-.669-.719-.916-.986-.248-.266-.496-.487-.669-.487-.173-.001-.347.049-.52.148-.173.099-.47.396-.669.694-.198.297-.297.645-.297.995 0 .347.099.694.297.991.198.297.986 1.511 2.379 2.405 1.392.894 2.379 1.039 3.222 1.137.845.099 1.639-.099 2.182-.446.544-.347.793-.744.891-1.091.099-.347.05-.695-.148-.794zm-5.466 5.837c-2.083 0-4.066-.669-5.708-1.934l-.396-.247-4.225.644.669-4.124-.247-.396c-1.265-1.938-1.934-4.116-1.934-6.295 0-6.493 5.315-11.808 11.808-11.808 3.171 0 6.146 1.214 8.382 3.419 2.236 2.205 3.419 5.18 3.419 8.389 0 6.493-5.315 11.808-11.808 11.808zm9.792-2.083c-.347.198-.992.595-2.083.793-.991.198-1.985.297-2.876.297-5.462 0-9.891-4.429-9.891-9.891 0-2.678.991-5.166 2.975-7.051 1.985-1.885 4.672-2.876 7.349-2.876 5.462 0 9.891 4.429 9.891 9.891 0 1.985-.595 3.869-1.784 5.462l1.786 6.543-6.346-1.786z"></path></svg>
+  </a>
 
   <!-- Script para Validação -->
   <script>
