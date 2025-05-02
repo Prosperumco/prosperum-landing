@@ -274,6 +274,98 @@
       0%, 100% { opacity: 1; }
       50% { opacity: 0.7; }
     }
+    /* Ajustes para Mobile */
+    @media (max-width: 640px) {
+      .hero-section {
+        min-height: 500px;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+      }
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      .hero-content p {
+        font-size: 1rem;
+      }
+      .logo {
+        width: 100px;
+        height: 100px;
+      }
+      .form-container {
+        padding: 1.5rem;
+        margin: 0 1rem;
+      }
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .form-field, .form-field-select {
+        padding: 0.6rem 1rem 0.6rem 2rem;
+        font-size: 0.9rem;
+      }
+      .form-label {
+        top: 0.6rem;
+        left: 2rem;
+        font-size: 0.9rem;
+      }
+      .form-field:not(:placeholder-shown) + .form-label,
+      .form-field:focus + .form-label {
+        transform: translateY(-1.8rem) translateX(-1.2rem) scale(0.85);
+      }
+      .form-icon {
+        width: 16px;
+        height: 16px;
+        left: 0.6rem;
+      }
+      .form-group-select::after {
+        right: 0.8rem;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid rgba(255, 255, 255, 0.8);
+      }
+      .submit-btn {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+      }
+      .trust-badges {
+        gap: 0.5rem;
+      }
+      .trust-badge {
+        width: 30px;
+        height: 30px;
+      }
+      .progress-bar {
+        margin-bottom: 0.8rem;
+      }
+      .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      h2 {
+        font-size: 1.75rem;
+      }
+      .benefit-card, .depoimento-card {
+        padding: 1.5rem;
+      }
+      .benefit-card h3, .depoimento-card p {
+        font-size: 1.1rem;
+      }
+      .partner-logos {
+        gap: 1.5rem;
+      }
+      .partner-logos img {
+        height: 40px;
+      }
+      .whatsapp-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px;
+      }
+      .whatsapp-btn img {
+        width: 35px;
+        height: 35px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -294,7 +386,7 @@
           <div class="progress-fill" id="progress-fill"></div>
         </div>
         <form action="https://formspree.io/f/xeogedew" method="POST" id="simulacao-form" onsubmit="return validateForm()">
-          <input type="hidden" name="formspree-id" value="myurid">
+          <input type="hidden" name="formspree-id" value="xeogedew">
           <div class="form-grid">
             <div class="form-group">
               <input type="text" id="nome" name="nome" class="form-field" placeholder="" required>
@@ -359,18 +451,18 @@
   <section class="py-16 bg-gray-100">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-azul-escuro text-center mb-10">Por que Escolher a Prosperum?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div class="bg-white p-8 rounded-xl shadow-xl text-center transform hover:scale-105 transition duration-300">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-xl text-center transform hover:scale-105 transition duration-300 benefit-card">
           <svg class="w-14 h-14 mx-auto mb-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           <h3 class="text-2xl font-semibold text-azul-escuro mb-3">Sem Juros</h3>
           <p class="text-gray-600">Apenas taxa de administração, ideal para investimentos planejados.</p>
         </div>
-        <div class="bg-white p-8 rounded-xl shadow-xl text-center transform hover:scale-105 transition duration-300">
+        <div class="bg-white p-8 rounded-xl shadow-xl text-center transform hover:scale-105 transition duration-300 benefit-card">
           <svg class="w-14 h-14 mx-auto mb-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
           <h3 class="text-2xl font-semibold text-azul-escuro mb-3">Planos Flexíveis</h3>
           <p class="text-gray-600">Parcelas a partir de R$263,00 para imóveis e carros de alto padrão.</p>
         </div>
-        <div class="bg-white p-8 rounded-xl shadow-xl text-center transform hover:scale-105 transition duration-300">
+        <div class="bg-white p-8 rounded-xl shadow-xl text-center transform hover:scale-105 transition duration-300 benefit-card">
           <svg class="w-14 h-14 mx-auto mb-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
           <h3 class="text-2xl font-semibold text-azul-escuro mb-3">Atendimento VIP</h3>
           <p class="text-gray-600">Consultores dedicados para planejar seu investimento.</p>
@@ -383,18 +475,18 @@
   <section class="py-16">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-azul-escuro text-center mb-10">Histórias de Sucesso</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div class="bg-white p-8 rounded-xl shadow-xl text-center">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-xl text-center depoimento-card">
           <img src="images/cliente1.jpeg" alt="Foto de Vinicius G." class="rounded-full mx-auto mb-4">
           <p class="text-gray-600 italic">"Comprei meu sobrado de R$450 mil sem juros. A Prosperum foi essencial!"</p>
           <p class="text-azul-escuro font-semibold mt-4">— Vinicius G., Empresário</p>
         </div>
-        <div class="bg-white p-8 rounded-xl shadow-xl text-center">
+        <div class="bg-white p-8 rounded-xl shadow-xl text-center depoimento-card">
           <img src="images/cliente2.jpeg" alt="Foto de Carlos M." class="rounded-full mx-auto mb-4">
           <p class="text-gray-600 italic">"Realizei o sonho do carro com parcelas que cabem no bolso."</p>
           <p class="text-azul-escuro font-semibold mt-4">— Carlos M., Empresário</p>
         </div>
-        <div class="bg-white p-8 rounded-xl shadow-xl text-center">
+        <div class="bg-white p-8 rounded-xl shadow-xl text-center depoimento-card">
           <img src="images/cliente3.jpeg" alt="Foto de Fernanda L." class="rounded-full mx-auto mb-4">
           <p class="text-gray-600 italic">"Atendimento excelente e plano perfeito para meu investimento."</p>
           <p class="text-azul-escuro font-semibold mt-4">— Fernanda L., Médica</p>
@@ -408,7 +500,7 @@
   <section class="py-16 bg-gray-100">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-azul-escuro text-center mb-10">Nossos Parceiros</h2>
-      <div class="flex justify-center space-x-12">
+      <div class="flex justify-center space-x-12 partner-logos">
         <img src="images/parceiro1.png" alt="Logo Parceiro 1" class="h-14 transition-transform hover:scale-110">
         <img src="images/parceiro2.png" alt="Logo Parceiro 2" class="h-14 transition-transform hover:scale-110">
         <img src="images/parceiro3.png" alt="Logo Parceiro 3" class="h-14 transition-transform hover:scale-110">
@@ -530,6 +622,5 @@
     // Inicializar progresso
     updateProgress();
   </script>
-  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'939971daeab58bbc',t:'MTc0NjIwOTEwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
