@@ -16,7 +16,7 @@
       --cinza-metalico: #B0B0B0;
     }
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: #f9fafb;
     }
     .bg-azul-escuro {
@@ -30,7 +30,7 @@
     }
     .hero-section {
       position: relative;
-      min-height: 600px;
+      min-height: 700px;
       overflow: hidden;
     }
     .hero-video {
@@ -43,7 +43,7 @@
       z-index: 0;
     }
     .hero-overlay {
-      background: rgba(27, 42, 68, 0.6);
+      background: rgba(27, 42, 68, 0.65);
       position: absolute;
       top: 0;
       left: 0;
@@ -56,79 +56,89 @@
       z-index: 2;
     }
     .logo {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
-      border: 2px solid var(--dourado);
+      border: 3px solid var(--dourado);
       object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+    .logo:hover {
+      transform: scale(1.05);
     }
     .form-container {
       background: var(--azul-escuro);
-      padding: 2.5rem;
-      border-radius: 16px;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-      max-width: 600px;
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+      max-width: 650px;
       margin: 0 auto;
-      background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.05));
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.08));
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      position: relative;
     }
     .form-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 2rem;
     }
     .form-group {
       position: relative;
     }
     .form-field {
       width: 100%;
-      padding: 0.75rem 1rem 0.75rem 2.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      background: rgba(255, 255, 255, 0.1);
+      padding: 0.9rem 1.2rem 0.9rem 3rem;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-radius: 10px;
+      font-size: 1.1rem;
+      transition: all 0.4s ease;
+      background: rgba(255, 255, 255, 0.12);
       color: #fff;
     }
     .form-field:focus {
       border-color: var(--dourado);
-      box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
       outline: none;
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.18);
     }
     .form-field::placeholder {
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba(255, 255, 255, 0.65);
     }
     .form-field:not(:placeholder-shown) + .form-label,
     .form-field:focus + .form-label {
-      transform: translateY(-2.2rem) translateX(-1.5rem) scale(0.85);
+      transform: translateY(-2.5rem) translateX(-1.8rem) scale(0.9);
       color: var(--dourado);
-      background: var(--cinza-metalico);
-      padding: 0 0.5rem;
+      background: var(--azul-escuro);
+      padding: 0 0.6rem;
+      border-radius: 5px;
     }
     .form-label {
       position: absolute;
-      top: 0.75rem;
-      left: 2.5rem;
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 1rem;
-      transition: all 0.3s ease;
+      top: 0.9rem;
+      left: 3rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1rem;
+      transition: all 0.4s ease;
       pointer-events: none;
     }
     .form-icon {
       position: absolute;
       top: 50%;
-      left: 0.75rem;
+      left: 1rem;
       transform: translateY(-50%);
-      width: 18px;
-      height: 18px;
-      color: rgba(255, 255, 255, 0.7);
+      width: 20px;
+      height: 20px;
+      color: rgba(255, 255, 255, 0.8);
+      transition: color 0.3s ease;
+    }
+    .form-field:focus ~ .form-icon {
+      color: var(--dourado);
     }
     .form-error {
       color: #ff6b6b;
-      font-size: 0.875rem;
-      margin-top: 0.25rem;
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
       display: none;
     }
     .form-error.active {
@@ -136,12 +146,12 @@
     }
     .form-field-select {
       width: 100%;
-      padding: 0.75rem 1rem 0.75rem 2.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      background: rgba(255, 255, 255, 0.1);
+      padding: 0.9rem 1.2rem 0.9rem 3rem;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-radius: 10px;
+      font-size: 1.1rem;
+      transition: all 0.4s ease;
+      background: rgba(255, 255, 255, 0.12);
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
@@ -150,9 +160,9 @@
     }
     .form-field-select:focus {
       border-color: var(--dourado);
-      box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
       outline: none;
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.18);
     }
     .form-group-select {
       position: relative;
@@ -161,13 +171,13 @@
       content: '';
       position: absolute;
       top: 50%;
-      right: 1rem;
+      right: 1.2rem;
       transform: translateY(-50%);
       width: 0;
       height: 0;
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      border-top: 6px solid rgba(255, 255, 255, 0.7);
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid rgba(255, 255, 255, 0.8);
       pointer-events: none;
     }
     .form-field-select option {
@@ -177,55 +187,108 @@
     .submit-btn {
       background: linear-gradient(90deg, var(--dourado) 0%, var(--dourado-escuro) 100%);
       color: var(--azul-escuro);
-      font-weight: 600;
-      padding: 1rem;
-      border-radius: 8px;
+      font-weight: 700;
+      padding: 1.2rem;
+      border-radius: 12px;
       width: 100%;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
     .submit-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.5);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(212, 175, 55, 0.6);
+      background: linear-gradient(90deg, var(--dourado-escuro) 0%, var(--dourado) 100%);
+    }
+    .submit-btn.loading::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      border: 3px solid var(--azul-escuro);
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      transform: translate(-50%, -50%);
+    }
+    .submit-btn.loading span {
+      opacity: 0;
+    }
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .trust-badge {
+      width: 40px;
+      height: 40px;
+      opacity: 0.9;
+      transition: transform 0.3s ease;
+    }
+    .trust-badge:hover {
+      transform: scale(1.1);
+    }
+    .progress-bar {
+      height: 4px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .progress-fill {
+      height: 100%;
+      background: var(--dourado);
+      width: 0;
+      transition: width 0.4s ease;
     }
     .animate-pulse-slow {
-      animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      animation: pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     }
     .whatsapp-btn {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 25px;
+      right: 25px;
       z-index: 1000;
       background-color: #25D366;
-      padding: 10px;
+      padding: 12px;
       border-radius: 50%;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
     }
     .whatsapp-btn:hover {
       background-color: #20b358;
+      transform: scale(1.1);
     }
     .whatsapp-btn img {
-      width: 40px;
-      height: 40px;
+      width: 45px;
+      height: 45px;
+    }
+    @keyframes spin {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
     }
   </style>
 </head>
 <body>
   <!-- Hero Section com Vídeo de Fundo -->
-  <section class="hero-section py-16 text-center text-white relative">
+  <section class="hero-section py-20 text-center text-white relative">
     <video class="hero-video" autoplay loop muted playsinline>
       <source src="video.mp4" type="video/mp4">
       Seu navegador não suporta vídeos.
     </video>
     <div class="hero-overlay"></div>
-    <div class="container mx-auto px-4 hero-content">
-      <img src="logo.png" alt="Logo Prosperum Consórcios" class="logo mx-auto mb-6">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Realize Seus Sonhos com a Prosperum</h1>
-      <p class="text-lg md:text-xl mb-8">Consórcios sem juros para carros, motos, imóveis e mais. Simule agora!</p>
+    <div class="container mx-auto px-6 hero-content">
+      <img src="logo.png" alt="Logo Prosperum Consórcios" class="logo mx-auto mb-8">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Realize Seus Sonhos com a Prosperum</h1>
+      <p class="text-lg md:text-2xl mb-10 font-light">Consórcios sem juros para carros, motos, imóveis e mais. Simule agora!</p>
       <div class="form-container">
-        <h2 class="text-2xl font-semibold text-white mb-6">Simule Seu Consórcio</h2>
+        <h2 class="text-3xl font-semibold text-white mb-6">Simule Seu Consórcio</h2>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
         <form action="/obrigado.html" method="GET" id="simulacao-form" onsubmit="return validateForm()">
           <div class="form-grid">
             <div class="form-group">
@@ -243,7 +306,8 @@
             <div class="form-group">
               <input type="tel" id="telefone" name="telefone" class="form-field" placeholder="(41) 99999-9999" required pattern="\(\d{2}\)\s\d{5}-\d{4}">
               <label for="telefone" class="form-label">Telefone (41) 99999-9999</label>
-              <svg class="form-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              <svg class="form-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="スタッフ
+round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
               <span class="form-error" id="telefone-error">Por favor, insira o telefone no formato (XX) XXXXX-XXXX.</span>
             </div>
             <div class="form-group form-group-select">
@@ -267,15 +331,20 @@
               <span class="form-error" id="valor-parcela-error">Por favor, insira uma parcela de no mínimo R$100.</span>
             </div>
           </div>
-          <div class="mb-4 flex items-center justify-center">
-            <input type="checkbox" id="lgpd" name="lgpd" class="mr-2" required>
-            <label for="lgpd" class="text-white text-sm">Concordo com a coleta de dados, conforme LGPD.</label>
+          <div class="mb-6 flex items-center justify-center">
+            <input type="checkbox" id="lgpd" name="lgpd" class="mr-3 h-5 w-5 text-dourado bg-transparent border-2 border-white rounded focus:ring-0" required>
+            <label for="lgpd" class="text-white text-sm font-medium">Concordo com a coleta de dados, conforme LGPD.</label>
           </div>
-          <button type="submit" class="submit-btn animate-pulse-slow" aria-label="Simular agora">Simular Agora</button>
-          <p class="text-white text-sm mt-4 text-center">🔒 Seus dados estão protegidos!</p>
+          <button type="submit" class="submit-btn animate-pulse-slow" aria-label="Simular agora"><span>Simular Agora</span></button>
+          <div class="trust-badges">
+            <img src="https://via.placeholder.com/40" alt="Selo de Segurança" class="trust-badge">
+            <img src="https://via.placeholder.com/40" alt="Selo LGPD" class="trust-badge">
+            <img src="https://via.placeholder.com/40" alt="Selo Confiável" class="trust-badge">
+          </div>
+          <p class="text-white text-sm mt-4 text-center font-medium">🔒 Seus dados estão protegidos!</p>
         </form>
       </div>
-      <p class="text-sm mt-4 font-semibold flex items-center justify-center">
+      <p class="text-sm mt-6 font-semibold flex items-center justify-center">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
         Oferta exclusiva até 25/05/2025!
       </p>
@@ -283,23 +352,23 @@
   </section>
 
   <!-- Benefícios -->
-  <section class="py-12 bg-gray-100">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-azul-escuro text-center mb-8">Por que Escolher a Prosperum?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition">
-          <svg class="w-12 h-12 mx-auto mb-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          <h3 class="text-xl font-semibold text-azul-escuro mb-2">Sem Juros</h3>
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-azul-escuro text-center mb-10">Por que Escolher a Prosperum?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="bg-white p-8 rounded-xl shadow-xl text-center transform hover:scale-105 transition duration-300">
+          <svg class="w-14 h-14 mx-auto mb-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <h3 class="text-2xl font-semibold text-azul-escuro mb-3">Sem Juros</h3>
           <p class="text-gray-600">Apenas taxa de administração, ideal para investimentos planejados.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition">
-          <svg class="w-12 h-12 mx-auto mb-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-          <h3 class="text-xl font-semibold text-azul-escuro mb-2">Planos Flexíveis</h3>
+        <div class="bg-white p-8 rounded-xl shadow-xl text-center transform hover:scale-105 transition duration-300">
+          <svg class="w-14 h-14 mx-auto mb-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+          <h3 class="text-2xl font-semibold text-azul-escuro mb-3">Planos Flexíveis</h3>
           <p class="text-gray-600">Parcelas a partir de R$263,00 para imóveis e carros de alto padrão.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition">
-          <svg class="w-12 h-12 mx-auto mb-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
-          <h3 class="text-xl font-semibold text-azul-escuro mb-2">Atendimento VIP</h3>
+        <div class="bg-white p-8 rounded-xl shadow-xl text-center transform hover:scale-105 transition duration-300">
+          <svg class="w-14 h-14 mx-auto mb-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+          <h3 class="text-2xl font-semibold text-azul-escuro mb-3">Atendimento VIP</h3>
           <p class="text-gray-600">Consultores dedicados para planejar seu investimento.</p>
         </div>
       </div>
@@ -307,47 +376,47 @@
   </section>
 
   <!-- Depoimentos -->
-  <section class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-azul-escuro text-center mb-8">Histórias de Sucesso</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+  <section class="py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-azul-escuro text-center mb-10">Histórias de Sucesso</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="bg-white p-8 rounded-xl shadow-xl text-center">
           <img src="https://via.placeholder.com/50" alt="Foto de Vinicius G." class="rounded-full mx-auto mb-4">
           <p class="text-gray-600 italic">"Comprei meu sobrado de R$450 mil sem juros. A Prosperum foi essencial!"</p>
           <p class="text-azul-escuro font-semibold mt-4">— Vinicius G., Empresário</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <div class="bg-white p-8 rounded-xl shadow-xl text-center">
           <img src="https://via.placeholder.com/50" alt="Foto de Carlos M." class="rounded-full mx-auto mb-4">
           <p class="text-gray-600 italic">"Realizei o sonho do carro com parcelas que cabem no bolso."</p>
           <p class="text-azul-escuro font-semibold mt-4">— Carlos M., Empresário</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <div class="bg-white p-8 rounded-xl shadow-xl text-center">
           <img src="https://via.placeholder.com/50" alt="Foto de Fernanda L." class="rounded-full mx-auto mb-4">
           <p class="text-gray-600 italic">"Atendimento excelente e plano perfeito para meu investimento."</p>
           <p class="text-azul-escuro font-semibold mt-4">— Fernanda L., Médica</p>
         </div>
       </div>
-      <p class="text-center text-azul-escuro font-semibold mt-8">Mais de <span class="text-dourado">Milhares de pessoas</span> já realizaram seus sonhos com o consórcio em Curitiba e no Brasil!</p>
+      <p class="text-center text-azul-escuro font-semibold mt-10 text-lg">Mais de <span class="text-dourado">Milhares de pessoas</span> já realizaram seus sonhos com o consórcio em Curitiba e no Brasil!</p>
     </div>
   </section>
 
   <!-- Parceiros -->
-  <section class="py-12 bg-gray-100">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-azul-escuro text-center mb-8">Nossos Parceiros</h2>
-      <div class="flex justify-center space-x-8">
-        <img src="https://via.placeholder.com/100" alt="Logo Parceiro 1" class="h-12">
-        <img src="https://via.placeholder.com/100" alt="Logo Parceiro 2" class="h-12">
-        <img src="https://via.placeholder.com/100" alt="Logo Parceiro 3" class="h-12">
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-azul-escuro text-center mb-10">Nossos Parceiros</h2>
+      <div class="flex justify-center space-x-12">
+        <img src="https://via.placeholder.com/100" alt="Logo Parceiro 1" class="h-14 transition-transform hover:scale-110">
+        <img src="https://via.placeholder.com/100" alt="Logo Parceiro 2" class="h-14 transition-transform hover:scale-110">
+        <img src="https://via.placeholder.com/100" alt="Logo Parceiro 3" class="h-14 transition-transform hover:scale-110">
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-azul-escuro text-white py-6">
-    <div class="container mx-auto text-center px-4">
-      <p>© 2025 Prosperum Consórcios. Todos os direitos reservados.</p>
-      <p class="mt-2">Curitiba, PR | <a href="https://instagram.com/prosperumconsorcios" class="text-dourado hover:underline" aria-label="Siga-nos no Instagram">Siga-nos no Instagram</a></p>
+  <footer class="bg-azul-escuro text-white py-8">
+    <div class="container mx-auto text-center px-6">
+      <p class="text-sm">© 2025 Prosperum Consórcios. Todos os direitos reservados.</p>
+      <p class="mt-3 text-sm">Curitiba, PR | <a href="https://instagram.com/prosperumconsorcios" class="text-dourado hover:underline" aria-label="Siga-nos no Instagram">Siga-nos no Instagram</a></p>
     </div>
   </footer>
 
@@ -356,7 +425,7 @@
     <img src="whatsapp-logo.png" alt="Logo do WhatsApp">
   </a>
 
-  <!-- Script para Validação -->
+  <!-- Script para Validação e Interatividade -->
   <script>
     function validateForm() {
       let isValid = true;
@@ -366,6 +435,7 @@
       const bemDesejado = document.getElementById('bem-desejado');
       const valorParcela = document.getElementById('valor-parcela');
       const lgpd = document.getElementById('lgpd');
+      const submitBtn = document.querySelector('.submit-btn');
 
       // Resetar erros
       document.querySelectorAll('.form-error').forEach(error => error.classList.remove('active'));
@@ -408,12 +478,32 @@
         isValid = false;
       }
 
+      if (isValid) {
+        submitBtn.classList.add('loading');
+        setTimeout(() => {
+          submitBtn.classList.remove('loading');
+        }, 2000); // Simula carregamento
+      }
+
       return isValid;
     }
 
-    // Validação em tempo real
-    document.querySelectorAll('.form-field, .form-field-select').forEach(field => {
+    // Progress Bar
+    const fields = document.querySelectorAll('.form-field, .form-field-select');
+    const progressFill = document.getElementById('progress-fill');
+    function updateProgress() {
+      const totalFields = fields.length;
+      let filledFields = 0;
+      fields.forEach(field => {
+        if (field.value.trim()) filledFields++;
+      });
+      const progress = (filledFields / totalFields) * 100;
+      progressFill.style.width = `${progress}%`;
+    }
+
+    fields.forEach(field => {
       field.addEventListener('input', () => {
+        updateProgress();
         const errorElement = document.getElementById(`${field.id}-error`);
         if (field.id === 'nome' && field.value.trim()) {
           errorElement.classList.remove('active');
@@ -432,6 +522,9 @@
         }
       });
     });
+
+    // Inicializar progresso
+    updateProgress();
   </script>
 </body>
 </html>
