@@ -546,13 +546,6 @@
         isValid = false;
       }
 
-      // Validação do Telefone
-      const telefoneRegex = /^\(\d{2}\)\s\d{5}-\d{4}$/;
-      if (!telefoneRegex.test(telefone.value)) {
-        document.getElementById('telefone-error').classList.add('active');
-        isValid = false;
-      }
-
       // Validação do Bem Desejado
       if (!bemDesejado.value) {
         document.getElementById('bem-desejado-error').classList.add('active');
